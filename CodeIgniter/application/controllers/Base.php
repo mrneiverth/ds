@@ -14,7 +14,7 @@ class Base extends CI_Controller{
     * Adiciona um usuário.
     */
     function criarUsuario(){
-
+        echo "aqui line 17";
         //$data = ("25483125412", "12345678", "Fulano", 0);
         $data = $this->input->post();
         $status = $this->usuario_model->Inserir($data);
@@ -82,7 +82,7 @@ class Base extends CI_Controller{
     * Atualiza uma figurinha.
     */
     function atualizarFigurinha(){
-        
+
         $id = $this->input->post('ID');
         $status = $this->figurinha_model->GetByID($id);
 

@@ -47,7 +47,6 @@ class Usuario_model extends CI_Model {
 
     $query = $this->db->get($this->Usuario);
     if ($query->num_rows() > 0) {
-      echo
       return $query->row_array();
     } else {
       return null;

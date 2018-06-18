@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="page-header">
         <meta charset="UTF-8">
-        <h1>TINDER DE FIGURINHAS</h1>
+        <h1>TINDER DE FIGURINHAS 6666</h1>
 	</div>
 
 	<?php if ($this->session->flashdata('error') == TRUE): ?>
@@ -24,11 +24,11 @@
     <div>
         <h3>Usuario</h3>
         <ol>
-            <li> <a href="user/create.php"> Inserir Usuario </a></li>
-            <li> <a href="user/read.html"> Listar Usuarios </a></li>
-            <li> <a href="user/update.html"> Atualizar Usuario </a></li>
-            <li> <a href="user/delete.html"> Remover Usuario </a></li>
-            <li> <a href="user/listarcolec.html"> Mostrar Colecao </a></li>
+            <li> <a href="application/views/user/criarUsuario.php"> Inserir Usuario </a></li>
+            <li> <a href="application/views/user/listarUsuarios.php"> Listar Usuarios </a></li>
+            <li> <a href="application/views/user/atualizarUsuario.php"> Atualizar Usuario </a></li>
+            <li> <a href="application/views/user/removerUsuario.php"> Remover Usuario </a></li>
+            <li> <a href="application/views/user/mostrarColecao.php"> Mostrar Colecao </a></li>
         </ol>
     </div>
 </div>
