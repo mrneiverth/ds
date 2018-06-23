@@ -8,12 +8,11 @@
     $sql = "SELECT * FROM usuario";
     $data = mysqli_query($link, $sql);
 
-    if ($data->num_rows > 0) {
-    // output data of each row
-        while($row = $data->fetch_assoc()) {
+    if ($data->num_rows > 0){
+        while($row = $data->fetch_assoc()){
             echo "CPF: " . $row["CPF"]. " - Nome: " . $row["Nome"]. " - Senha: " . $row["Senha"]. " - Inter Classe: " . $row["Inter_Classe"]. " - Qtt: " . $row["Qtt"]. "<br>";
         }
-    }else {
+    }else{
         echo "Nenhum resultado";
     }
 
