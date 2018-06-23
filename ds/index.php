@@ -70,14 +70,30 @@
 	        <h1>Bem vindo ao sistema de trocas de fig</h1>
 	        <p>Troque figs!</p>
 	      </div>
-
+				<div class="col-md-4">
+					<form method="get" action="show_figs.php" id="showFigs">
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary form-control">Show All Figs</button>
+						</div>
+				</div>
 	      <div class="clearfix"></div>
 		</div>
+			<div class="col-md-4">
+				<form method="get" action="show_trocas.php" id="showTrocas">
+					<div class="form-group">
+						<button type="submit" class="btn btn-secondary form-control">Show All trocas</button>
+					</div>
+			</div>
+			<div class="col-md-4">
+				<form method="get" action="show_users.php" id="showUsers">
+					<div class="form-group">
+						<button type="submit" class="btn btn-thirdy form-control">Show All Users</button>
+					</div>
+			</div>
 
-
-	    </div>
 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 	</body>
 </html>
+
