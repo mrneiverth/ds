@@ -1,5 +1,5 @@
 #for not troubles in the server, edit on your own machine if u need so
-db.classl.php
+ds/db.class.php
 
 vendor/
 node_modules/
