@@ -1,25 +1,3 @@
-<?php
-
-    require_once('db.class.php');
-
-    $objDb = new db();
-    $link = $objDb->conecta_mysql();
-
-    $sql = "SELECT * FROM usuario";
-    $query = mysqli_query($link, $sql);
-
-    if(!$query){
-        die ('SQL Error: ' . mysqli_error($conn));
-    }
-    /*if ($data->num_rows > 0){
-        while($row = $data->fetch_assoc()){
-            echo "CPF: " . $row["CPF"]. " - Nome: " . $row["Nome"]. " - Senha: " . $row["Senha"]. " - Inter Classe: " . $row["Inter_Classe"]. " - Qtt: " . $row["Qtt"]. "<br>";
-        }
-    }else{
-        echo "Nenhum resultado";
-    }*/
-
-?>
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
@@ -56,7 +34,8 @@
         <div class="container">
             <h1>Usuários cadastrados</h1>
 
-            <form method="post" action="readUsuario.php">
+            <form>
+                <?php include'read_usuario.php'?>
                 <table class="table table-striped table-hover table-bordered">
         			<caption>Usuários</caption>
         			<thead>
@@ -81,8 +60,8 @@
                                     <td><?= $row['Inter_Classe'] ?></td>
                                     <td><?= $row['Qtt'] ?></td>
                                     <td class="text-left">
-                                        <li><a href="updateUser.php">[Editar]</a></li>
-                                        <li><a href="deleteUser.php">[Excluir]</a></li>
+                                        <li><a href="<?="update_usuario_view.php?cpf={$row['CPF']}"?>">[Editar]</a></li>
+                                        <li><a href="<?="delete_usuario.php?cpf={$row['CPF']}"?>">[Excluir]</a></li>
                                     </td>
         						</tr>
         					<?php endforeach; ?>
