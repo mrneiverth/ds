@@ -73,7 +73,7 @@
 				</form>
 			</div>
 			<div class="col-md-4">
-				<form method="get" action="troca.html" id="showTrocas">
+				<form method="get" action="read_troca_view.php" id="showTrocas">
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary form-control">Trocas</button>
 					</div>
