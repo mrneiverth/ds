@@ -1,8 +1,7 @@
 <?php
 
     require_once('db.class.php');
-
-    $ID = $_POST['ID'];
+    $ID = $_GET['ID'];
     echo $ID;
     echo '<br />';
 
@@ -13,7 +12,8 @@
 
     //executar a query
     if(mysqli_query($link, $sql)){
-        echo "Troca Deletada com sucesso!";
+        $redirect = "read_troca_view.php";
+        header('Location: '.$redirect);
     }else{
         echo "Erro ao registrar troca!";
         echo '<br />';
