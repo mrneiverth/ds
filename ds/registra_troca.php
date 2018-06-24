@@ -1,5 +1,5 @@
 <?php
-    echo 'chaaamouuu'
+    echo 'chaaamouuu';
     echo '<br />';
     require_once('db.class.php');
 
@@ -12,7 +12,7 @@
     $Para = $_POST['Para'];
     echo $Para;
     echo '<br />';
-    $Fig = $_POST['Fig']
+    $Fig = $_POST['Fig'];
     echo $Fig;
     echo '<br />';
 
@@ -23,13 +23,12 @@
 
     //executar a query
     if(mysqli_query($link, $sql)){
-        echo "Usuário registrado com sucesso!";
+        $redirect = "read_troca_view.php";
+        header('Location: '.$redirect);
     }else{
         echo "Erro ao registrar o usuário!";
         echo '<br />';
         echo mysqli_error($link);
     }
 
-    $redirect = "read_troca_view.php";
-    header('Location: '.$redirect);
 ?>
