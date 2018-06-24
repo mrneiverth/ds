@@ -1,5 +1,6 @@
 <?php
-
+    echo 'chaaamouuu'
+    echo '<br />';
     require_once('db.class.php');
 
     $ID = $_POST['ID'];
@@ -11,7 +12,7 @@
     $Para = $_POST['Para'];
     echo $Para;
     echo '<br />';
-    $Fig = $_POST['Fig'];
+    $Fig = $_POST['Fig']
     echo $Fig;
     echo '<br />';
 
@@ -22,11 +23,13 @@
 
     //executar a query
     if(mysqli_query($link, $sql)){
-        echo "Troca registrada com sucesso!";
+        echo "Usuário registrado com sucesso!";
     }else{
-        echo "Erro ao registrar troca!";
+        echo "Erro ao registrar o usuário!";
         echo '<br />';
         echo mysqli_error($link);
     }
 
+    $redirect = "read_troca_view.php";
+    header('Location: '.$redirect);
 ?>
