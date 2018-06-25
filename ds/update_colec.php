@@ -2,10 +2,10 @@
 
     require_once('db.class.php');
 
-    $cpf = $_POST['quantidade'];
+    $quantidade = $_POST['quantidade'];
     echo $quantidade;
     echo '<br />';
-    $senha = $_POST['numero'];
+    $numero = $_POST['numero'];
     echo $numero;
     echo '<br />';
     

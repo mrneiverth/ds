@@ -2,7 +2,7 @@
 <html lang="pt-br">
 	<?php
 		$cpf_user = $_GET['cpf'];
-		echo $cpf_user; 
+		//echo $cpf_user; 
 	?>
 
 	<head>
@@ -60,7 +60,7 @@
 					</div>
 
 					<div class="form-group">
-						<input type="hidden" name="varname" value="var_value">
+						<input type="hidden" name="<?php echo $cpf_user; ?>" value="var_value">
 					</div>
 
 					<button type="submit" class="btn btn-primary form-control">Atualizar</button>
