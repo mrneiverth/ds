@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<?php
-		$cpf_user = $_GET['cpf']; 
+		$cpf_user = $_GET['cpf'];
+		echo $cpf_user; 
 	?>
 
 	<head>
@@ -58,7 +59,11 @@
 						<input type="number" min="0" class="form-control" id="quantidade" name="Quantidade" placeholder="Quantidade" required="requiored">
 					</div>
 
-					<button type="submit" class="btn btn-primary form-control" href="<?="delete_usuario.php?cpf={$cpf_user}"?>">Atualizar</button>
+					<div class="form-group">
+						<input type="hidden" name="varname" value="var_value">
+					</div>
+
+					<button type="submit" class="btn btn-primary form-control">Atualizar</button>
 				</form>
 			</div>
 			<div class="col-md-4"></div>
