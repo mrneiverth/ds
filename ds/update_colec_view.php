@@ -52,15 +52,15 @@
 	    		<br />
 				<form method="post" action="update_colec.php" id="formColec">
 					<div class="form-group">
-						<input type="number" min="0" max = "681" class="form-control" id="numero" name="Número" placeholder="Numero" required="requiored">
+						<input type="number" min="0" max = "681" class="form-control" id="numero" name="numero" placeholder="numero" required="requiored">
 					</div>
 
 					<div class="form-group">
-						<input type="number" min="0" class="form-control" id="quantidade" name="Quantidade" placeholder="Quantidade" required="requiored">
+						<input type="number" min="0" class="form-control" id="quantidade" name="quantidade" placeholder="quantidade" required="requiored">
 					</div>
 
 					<div class="form-group">
-						<input type="hidden" name="<?php echo $cpf_user; ?>" value="var_value">
+						<input type="hidden" name="cpf" value="<?php echo $cpf_user; ?>">
 					</div>
 
 					<button type="submit" class="btn btn-primary form-control">Atualizar</button>

@@ -8,5 +8,8 @@
     $numero = $_POST['numero'];
     echo $numero;
     echo '<br />';
+
+    $cpf = $_POST['cpf'];
+    echo $cpf;
     
 ?>
