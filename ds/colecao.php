@@ -10,16 +10,19 @@
     $sql = "SELECT * from fig_colecao WHERE Usuario = " . $cpf_user;
 
     $data = mysqli_query($link, $sql);
-    $figs_sql = "SELECT * from figurinha";
+   // $figs_sql = "SELECT * from figurinha";
 
-    $figs = mysqli_query($link, $figs_sql);
+//    $figs = mysqli_query($link, $figs_sql);
 
     $flag = 0;
 
     if ($data->num_rows > 0){
         while($row = $data->fetch_assoc()){
             if($row["Quantidade"] ) {
-                echo "Id: " . $row["ID"]. " - Quantidade: " . $row["Quantidade"] . " <br>";
+                $sql = "SELECT Nome from figurinha WHERE ID = " . $row["ID"];
+                $fig = mysqli_query($link, $sql);
+                $fig_data = $fig->fetch_assoc();
+                echo "Id: " . $row["ID"]. " - Nome: ". $fig_data["Nome"] . " - Quantidade: " . $row["Quantidade"] . " <br>";
                 $flag = 1;
             }
         }
