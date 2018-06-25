@@ -1,5 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
+	<?php
+		$cpf_user = $_GET['cpf']; 
+	?>
+
 	<head>
 		<meta charset="UTF-8">
 
@@ -54,7 +58,7 @@
 						<input type="number" min="0" class="form-control" id="quantidade" name="Quantidade" placeholder="Quantidade" required="requiored">
 					</div>
 
-					<button type="submit" class="btn btn-primary form-control">Atualizar</button>
+					<button type="submit" class="btn btn-primary form-control" href="<?="delete_usuario.php?cpf={$cpf_user}"?>">Atualizar</button>
 				</form>
 			</div>
 			<div class="col-md-4"></div>
