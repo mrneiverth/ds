@@ -27,7 +27,7 @@
         $flag = 1;
         echo "Nenhum resultado";
     }
-    if(flag==0)
+    if($flag==0)
     {
         echo "Nenhum resultado";
     }
