@@ -26,4 +26,16 @@
         echo mysqli_error($link);
     }
 
+    $sql = "INSERT INTO fig_colecao VALUES";
+    for($i = 0 ; $i<682; $i++)
+    {
+        if($i != 681) {
+            $sql = $sql . "(" . $cpf . "," . $i . ", 0) ,";
+        }
+        else{
+            $sql = $sql . "(" . $cpf . "," . $i . ", 0)";
+        }
+
+    }
+    mysqli_query($link, $sql);
 ?>
