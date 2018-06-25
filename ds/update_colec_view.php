@@ -45,7 +45,7 @@
 	    	<div class="col-md-4">
 	    		<h3>Alterar coleção!</h3>
 	    		<br />
-				<form method="post" action="update_colecao.php" id="formColec">
+				<form method="post" action="update_colec.php" id="formColec">
 					<div class="form-group">
 						<input type="number" min="0" max = "681" class="form-control" id="numero" name="Número" placeholder="Numero" required="requiored">
 					</div>
