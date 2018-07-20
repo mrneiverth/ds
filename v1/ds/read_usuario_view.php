@@ -62,7 +62,8 @@
                                     <td class="text-left">
                                         <li><a href="<?="update_usuario_view.php?cpf={$row['CPF']}"?>">[Editar]</a></li>
                                         <li><a href="<?="delete_usuario.php?cpf={$row['CPF']}"?>">[Excluir]</a></li>
-										<li><a href="<?="colecao.php?cpf={$row['CPF']}"?>">[Coleção]</a></li>
+										<li><a href="<?="colecao.php?cpf={$row['CPF']}"?>">[Listar Coleção]</a></li>
+                                        <li><a href="<?="update_colec_view.php?cpf={$row['CPF']}"?>">[Alterar Coleção]</a></li>
                                     </td>
         						</tr>
         					<?php endforeach; ?>
