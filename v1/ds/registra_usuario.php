@@ -1,41 +1,19 @@
 <?php
-
-    require_once('db.class.php');
+    
+    require_once 'UsuarioNaoCadastrado.php';
 
     $cpf = $_POST['cpf'];
-    echo $cpf;
-    echo '<br />';
     $senha = $_POST['senha'];
-    echo $senha;
-    echo '<br />';
     $nome = $_POST['nome'];
-    echo $nome;
-    echo '<br />';
 
-    $objDb = new db();
-    $link = $objDb->conecta_mysql();
+    $usuario = new UsuarioNaoCadastrado($cpf, $senha, $nome);
 
-    $sql = "INSERT INTO usuario (CPF, Senha, Nome, Inter_Classe, Qtt) VALUES ('$cpf', '$senha', '$nome', '1', '1')";
+    echo "chegouuuuuu";
 
-    //executar a query
-    if(mysqli_query($link, $sql)){
-        echo "Usuário registrado com sucesso!";
-    }else{
-        echo "Erro ao registrar o usuário!";
-        echo '<br />';
-        echo mysqli_error($link);
-    }
+    #$usuario->VerificaArgumentos();
 
-    $sql = "INSERT INTO fig_colecao VALUES";
-    for($i = 0 ; $i<682; $i++)
-    {
-        if($i != 681) {
-            $sql = $sql . "(" . $cpf . "," . $i . ", 0) ,";
-        }
-        else{
-            $sql = $sql . "(" . $cpf . "," . $i . ", 0)";
-        }
+    $usuario->Cadastrar();
 
-    }
-    mysqli_query($link, $sql);
+    echo "chegouuuuuu";
+
 ?>
