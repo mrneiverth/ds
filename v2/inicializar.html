@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Tinderinhas - Inicializar Coleção</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css"/> 
+		<link rel="stylesheet" href="style.css">
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+		<style> 
+         .graybox {
+            background-color:#ddd;
+            align-items: center;
+         }
+      </style>
+    </head>
+    
+    <body>
+   
+   	<main class="mdl-layout__content">    
+        <div id="dvFigs" class = "mdl-grid">
+
+        </div>
+	</main>
+
+   	<div> 
+   		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          	Finalizar
+        </button>
+   	</div>
+   
+	<script type="text/javascript">
+		function incrementValue(element) {
+			var number = element.id.split("_")[2];
+			var value = document.getElementById("value_fig_" + number);
+
+			if (element.id.includes('plus')) {
+				value.text(parseInt(value.text()) + 1);
+			}
+			else {
+				value.text(Math.max(parseInt(value.text()) - 1 , 0));
+			}
+		}
+		
+   	</script>
+
+    <script type="text/javascript">
+
+    	var mainDiv = document.getElementById("dvFigs");
+    	for (var i = 0; i <= 682; ++i) {
+    		var div = document.createElement('div');
+    		div.className = "mdl-cell mdl-cell--2-col graybox";
+    		var image = document.createElement('img');
+    		image.src = "https://pm1.narvii.com/6876/94c73c4f06eeda3f1df20452d9c30d6a7e02b7aer1-341-341v2_128.jpg"
+    		
+    		var value = document.createElement('span');
+    		value.id = "value_fig_" + i;
+    		value.style = "margin: 10px;";
+    		value.textContent = 0;
+
+    		var minus = document.createElement('button')
+    		minus.id = "minus_fig_" + i;
+    		minus.className = "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect";
+    		minus.addEventListener('click', function() {
+    			document.getElementById("value_fig_" + this.id.split("_")[2]).textContent = Math.max(parseInt(document.getElementById("value_fig_" + this.id.split("_")[2]).textContent) - 1, 0);
+    			}
+    		);
+    		
+    		var minusSymbol= document.createElement('i');
+    		minusSymbol.className = "material-icons";
+    		minusSymbol.appendChild(document.createTextNode('remove'));
+    		
+			var plus = document.createElement('button')
+    		plus.id = "plus_fig_" + i;
+    		plus.className = "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect";
+    		plus.addEventListener('click', function() {
+    			document.getElementById("value_fig_" + this.id.split("_")[2]).textContent = parseInt(document.getElementById("value_fig_" + this.id.split("_")[2]).textContent) + 1;
+    			}
+    		);
+    		var plusSymbol = document.createElement('i');
+    		plusSymbol.className = "material-icons";
+    		plusSymbol.appendChild(document.createTextNode('add'));
+
+    		minus.appendChild(minusSymbol);
+    		plus.appendChild(plusSymbol);
+    		div.appendChild(image);
+    		div.appendChild(minus);
+    		div.appendChild(value);
+    		div.appendChild(plus);
+    		mainDiv.appendChild(div);
+    	}
+    
+    </script>
+
+    </body>
+
+</html>
