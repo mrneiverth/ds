@@ -18,5 +18,9 @@
         public function getTrocas() {
             return $this->trocas;
         }
+
+        public function carregar() {
+            
+        }
     }
 ?>
