@@ -8,9 +8,9 @@ CREATE TABLE IF NOT EXISTS usuario(
   CPF CHAR(11) NOT NULL,
   Senha CHAR(8) NOT NULL,
   Nome VARCHAR(60) NOT NULL,
-  E-Mail VARCHAR(50) NOT NULL,
+  Email VARCHAR(50) NOT NULL,
   Cidade VARCHAR(100) NOT NULL,
-  Estado ENUM('AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO') NOT NULL, 
+  Estado ENUM('AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO') NOT NULL,
   Inter_Classe BOOL NOT NULL DEFAULT False,
   Qtt TINYINT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY(CPF)
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS escudo(
 );
 
 CREATE TABLE IF NOT EXISTS selecao(
-  ID SMALLINT(3) UNSIGNED NOT NULL,  
+  ID SMALLINT(3) UNSIGNED NOT NULL,
   Pais VARCHAR(20) NOT NULL,
   PRIMARY KEY (ID),
   FOREIGN KEY (ID) REFERENCES figurinha (ID)
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS fig_colecao(
   Quantidade TINYINT UNSIGNED NOT NULL,
   PRIMARY KEY (Usuario, ID),
   FOREIGN KEY (Usuario) REFERENCES usuario (CPF) ON DELETE CASCADE,
-  FOREIGN KEY (ID) REFERENCES figurinha (ID) 
+  FOREIGN KEY (ID) REFERENCES figurinha (ID)
 );
 
 CREATE TABLE IF NOT EXISTS troca(
