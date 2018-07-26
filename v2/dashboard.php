@@ -11,13 +11,12 @@
 
         <style>
         .demo-card-square.mdl-card {
-          width: 720px;
-          height: 200px;
-          margin: 10px
+          width: 480px;
+          height: 160px;
+          margin: 10px;
         }
         .demo-card-square > .mdl-card__title {
           color: #0000;
-          background:
         }
         </style>
 
@@ -36,23 +35,32 @@
             $objDb = new db();
             $link = $objDb->conecta_mysql();
             $sql = "SELECT * FROM usuario WHERE cpf='$cpf'";
+
             $result = mysqli_query($link, $sql) or die(mysqli_error());
 
-            $row = mysqli_fetch_assoc($result);
+            $row = mysqli_fetch_row($result);
+
         ?>
     </head>
     
     <body>
+        <h1><?php  ?></h1>
         
         <div class="demo-card-square mdl-card mdl-shadow--4dp">
             <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    
+                    <?php echo $row[2] ?>
                 </a>
             </div>  
             <div class="mdl-card__supporting-text">
-                <?php echo $row['nome']; ?>
+                XXX/682 Figurinhas <br>
+                XX% do Album <br>
+                XXX Repetidas <br>
+                
             </div>
+            
+        </div>
+        <div>
             <div
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location='/ds/v2/index.html';">
                     Configurações

@@ -17,6 +17,7 @@
         $_SESSION['cpf'] = $cpf;
         $_SESSION['senha'] = $senha;
         header('Location:/ds/v2/dashboard.php');
+        exit;
     }else{
         unset ($_SESSION['cpf']);
         unset ($_SESSION['senha']);
