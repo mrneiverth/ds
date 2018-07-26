@@ -20,7 +20,7 @@
     }else{
         unset ($_SESSION['cpf']);
         unset ($_SESSION['senha']);
-        header('Location:/ds/v2/errobanco.html');
+        header('Location:/ds/v2/dadosinvalidoslogin.html');
         exit;
     }
 ?>
