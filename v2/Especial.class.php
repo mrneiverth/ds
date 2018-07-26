@@ -5,10 +5,10 @@
 	class Especial extends Brilhante 
 	{
 
-	}
+		public function getInfo() {
+			return "Nome: " . $this->nome . "\n";
+		}
 
-	public function getInfo() {
-		return "Nome: " . $this->nome . "\n";
 	}
 
 ?>

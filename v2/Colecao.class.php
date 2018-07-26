@@ -20,12 +20,14 @@
 			return $this->repetidas;
 		}
 
-		public function atualizarColeacao($figs) {
-
+		public function atualizarColecao($figs) {
+			foreach ($figs as $fig) {
+				$this->adicionarFigurinha($fig);
+			}
 		}
 
 		public function getEstatisticas() {
-
+			return $this->album->getEstatisticas() . "{count($this->repetidas)} Repetidas\n";
 		}
 
 		private function adicionarFigurinha($fig) {

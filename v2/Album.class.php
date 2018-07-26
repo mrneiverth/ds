@@ -14,7 +14,7 @@
 			$this->faltantes = 682;
 		}
 
-		public function carregar()
+		public function carregar() {
 		
 		}
 
@@ -23,7 +23,7 @@
 		}
 
 		public function getEstatisticas() {
-
+			return "{$this->coladas}/682 Figurinhas Coladas\n{round($this->coladas/682}% do Album Completo\n";
 		}
 
 		public function isRepetida($fig) {

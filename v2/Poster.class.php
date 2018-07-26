@@ -5,7 +5,6 @@
 	class Estadio extends Comum 
 	{
 
-		protected $capacidade;
 		protected $cidade;
 
 		public function __constructor($num, $nom, $cid) {

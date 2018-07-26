@@ -5,8 +5,7 @@
 	class Selecao extends Comum 
 	{
 
-		protected $capacidade;
-		protected $cidade;
+		protected $pais;
 
 		public function __constructor($num, $nom, $p) {
 			parent::__construct($num, $nom);

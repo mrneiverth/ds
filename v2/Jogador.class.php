@@ -27,7 +27,7 @@
 
 		# Getter unico, se precisar da pra quebrar em varios
 		public function getInfo() {
-			return "Nome: " . $this->nome . "\nPais: " . $this->pais "\nPosição: " . $this->posicao . "\nConvocação: " . $this->convocacao . "\nData de Nascimento: " . $this->nascimento . "\nAltura: " . $this->altura . "\nPeso: " . $this->peso . "\nClube: " . $this->clube . "\n";
+			return "Nome: " . $this->nome . "\nPais: " . $this->pais . "\nPosição: " . $this->posicao . "\nConvocação: " . $this->convocacao . "\nData de Nascimento: " . $this->nascimento . "\nAltura: " . $this->altura . "\nPeso: " . $this->peso . "\nClube: " . $this->clube . "\n";
 		}
 	}
 

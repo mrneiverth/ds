@@ -16,7 +16,7 @@
 
 		# Getter unico, se precisar da pra quebrar em varios
 		public function getInfo() {
-			return "Nome: " . $this->nome . "\nCapacidade: " . $this->cap "\nCidade: " . $this->cidade . "\n";
+			return "Nome: " . $this->nome . "\nCapacidade: " . $this->cap . "\nCidade: " . $this->cidade . "\n";
 		}
 	}
 
