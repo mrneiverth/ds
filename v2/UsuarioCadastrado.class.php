@@ -7,6 +7,5 @@
     class UsuarioCadastrado extends Usuario
     {
 
-        private 
     }
 ?>

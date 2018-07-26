@@ -49,6 +49,7 @@
 
         public function VerificarArgumentos($confirmarsenha)
         {
+            echo "chegou aqui";
             if ($this->verificarCPF()) {
                 if ($this->senha == $confirmarsenha) {
                     return True;

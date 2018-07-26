@@ -14,17 +14,16 @@
     	</div>
 
     	<div id="form">
-    		<form action="#">
-  				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="CPF">
-    				<label class="mdl-textfield__label" for="CPF">CPF</label>
-    				<!-- <span class="mdl-textfield__error">Input is not a number!</span> -->	
-  				</div>
+    		<form method="POST" action="login.script.php" id="form_login">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input id="cpf" name="cpf" maxlength="11" class="mdl-textfield__input" type="text" required>
+					<label class="mdl-textfield__label" for="cpf">CPF</label>
+				</div>
 
-  				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    				<input class="mdl-textfield__input" type="password" id="senha">
-    				<label class="mdl-textfield__label" for="senha">Senha</label>
-  				</div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input id="senha" name="senha" maxlength="8" class="mdl-textfield__input" type="password">
+					<label class="mdl-textfield__label" for="senha">Senha</label>
+				</div>
 
   				<div id="esquecisenha">
   					<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
@@ -32,9 +31,9 @@
 					</button>
   				</div>
 
-  				<div id="login">
-  					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-  						Login
+				<div id="login">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent form-control" type="submit">
+						Login
 					</button>
 				</div>
 
