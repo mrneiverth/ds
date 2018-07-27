@@ -42,6 +42,10 @@
             return $this->trocas;
         }
 
+        public function temFigurinha($fig) {
+            return $this->colecao->getAlbum()->temFigurinha($fig);
+        }
+
         public function carregar() {
             $objDb = new db();
             $link = $objDb->conecta_mysql();

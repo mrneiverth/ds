@@ -35,13 +35,13 @@
 
     <body>
     	<div id="inicializar" align="center">
-    		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location='/ds/v2/index.html';">
+    		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location='/ds/v2/dashboard.php';">
   				<h4>Inicializar Coleção</h4>
 			  </button>
     	</div>
 
       <div id="vazia" align = "center">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location='/ds/v2/index.html';" id="empty">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location='/ds/v2/dashboard.php';" id="empty">
           <h4>Começar com Coleção Vazia</h4>
         </button>
       </div>

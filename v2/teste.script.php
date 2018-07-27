@@ -9,7 +9,7 @@
 
     $user->carregar();
 
-    $user->removerFigurinha(3);
+    $user->adicionarFigurinha(3);
 
     foreach ($user->getColecao()->getAlbum()->getFigurinhas() as $value) {
     	echo $value;

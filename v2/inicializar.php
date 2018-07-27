@@ -22,37 +22,17 @@
                     jsonArray[i] = parseInt(atual.textContent);
                 }
 
-                console.log(jsonArray);
-
                 $.ajax({
-                    method: "POST",
-                    url: 'ds/v2/updatecolecaonova.php',
-                    data: "batata",
-                    
-                    sucess: function () {
-                        alert("OK");
-                        window.location = "ds/v2/updatecolecaonova.php";
-                    },
-                    fail: function(XMLHttpRequest, textStatus, errorThrown) {
-                        alert("some error");
-                        window.location = ""
-                    }
+                    url: "ds/v2/updatecolecaonova/",
+                    type: "POST",
+                    data: "campo1=dado1&campo2=dado2&campo3=dado3",
+                    dataType: "html"
                 });
 
+                window.location = "updatecolecaonova.php";
             }
         </script>
 
-        <?php
-          require_once 'VerificadorSessao.class.php';
-          
-          session_start();
-          
-          VerificadorSessao::verificarSessao();
-        ?>
-
-
-    </head>
-    
     <body>
    
    	<main class="mdl-layout__content">    
