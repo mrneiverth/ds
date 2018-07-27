@@ -3,11 +3,11 @@
         <title>Tinderinhas - Meu Album</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css"/> 
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css"/>
         <link rel="stylesheet" href="style.css">
         <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
-        <?php 
+        <?php
             ini_set('display_errors', 'On');
 
             require_once 'VerificadorSessao.class.php';
@@ -40,7 +40,9 @@
             /* Style the collapsible content. Note: hidden by default */
             .mdl-grid {
               display: none;
+
             }
+
 
         </style>
 
@@ -55,10 +57,23 @@
         </script>
 
     </head>
-    
-    <body>
 
-        <?php 
+    <body>
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-color--red-400">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Minha Coleção</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+
+        </div>
+      </header>
+      <!-- button voltar -->
+      <main class="mdl-layout__content">
+        <div class="page-content"><!-- Your content goes here -->
+        <?php
 
             $sections = array(
                 "Especiais" => 8,
@@ -97,27 +112,28 @@
                 "Colômbia" => 20,
                 "Japão" => 20,
                 "Legends" => 10
-            ); 
+            );
 
             $j = 0;
             foreach ($sections as $section => $quantity) {
                 echo "<div>
                         <button class=\"collapsible\" onclick=\"toggle_visibility('section_".$section."')\">".$section."</button>
                         <div class=\"mdl-grid\" id=\"section_".$section."\">";
-                         
+
                 for ($i=0; $i < $quantity; $i++) {
                     $path_to_image = $user->temFigurinha($j) ? "firmino" : "canarinho";
-                    echo "<div class=\"mdl-cell mdl-cell--2-col\"> 
-                    <a href='figurinha.php?id=".$j."'><img src=\"http://54.94.241.129/".$path_to_image."/".$path_to_image.$j.".png\"> </a> </div>"; 
+                    echo "<div class=\"mdl-cell mdl-cell--2-col\">
+                    <a href='figurinha.php?id=".$j."'><img src=\"http://54.94.241.129/".$path_to_image."/".$path_to_image.$j.".png\"> </a> </div>";
                     $j = $j + 1;
                 }
-                
+
                 echo "</div> </div>";
 
             }
 
         ?>
-
+          </div>
+        </main>
+      </div>
     </body>
 </html>
-

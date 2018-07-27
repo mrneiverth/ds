@@ -1,5 +1,5 @@
 <?php
-    
+
     require_once 'db.class.php';
     require_once 'Usuario.class.php';
     #require_once 'RegrasTroca.class.php';
@@ -21,9 +21,9 @@
         public function initColecaoVazia() {
             $objDb = new db();
             $link = $objDb->conecta_mysql();
-            
+
             $sql = "INSERT INTO fig_colecao VALUES ";
-            for ($i=0; $i < 681; $i++) { 
+            for ($i=0; $i < 681; $i++) {
                 $sql = $sql . "(\"" . $this->cpf . "\" , {$i}, 0), ";
             }
 
@@ -52,8 +52,8 @@
             $consulta_colecao = "SELECT quantidade FROM fig_colecao WHERE usuario='$this->cpf'";
             $dados = mysqli_query($link, $consulta_colecao);
             $dados = mysqli_fetch_all($dados, MYSQLI_ASSOC);
-            echo "$this->cpf";
-            print_r($dados[0]['quantidade']);
+            #echo "$this->cpf";
+            #print_r($dados[0]['quantidade']);
             $this->colecao->carregar($dados);
             mysqli_close($link);
         }
