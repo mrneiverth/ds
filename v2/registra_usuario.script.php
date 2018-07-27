@@ -1,14 +1,19 @@
 <?php
+    ini_set('display_errors', 'On');
+
     require_once 'UsuarioNaoCadastrado.class.php';
+    require_once 'UsuarioCadastrado.class.php';
 
     $usuario = new UsuarioNaoCadastrado($_POST['cpf'], $_POST['senha'], $_POST['nome'], $_POST['email'], $_POST['cidade'], $_POST['estado']);
 
     if ($usuario->VerificarArgumentos($_POST['confirmarsenha'])) {
     	if($usuario->Cadastrar()) {
-    		session_start();
-    		$_SESSION['usuario_ativo'] = new UsuarioNaoCadastrado($_POST['cpf'], $_POST['senha'], $_POST['nome'], $_POST['email'], $_POST['cidade'], $_POST['estado']);
-    		header('Location:/ds/v2/index.html');
-    		exit;	
+    		$usuario = new UsuarioCadastrado($_POST['cpf'], $_POST['senha'], $_POST['nome'], $_POST['email'], $_POST['cidade'], $_POST['estado']);
+            $usuario->initColecaoVazia();
+            session_start();
+            $_SESSION['usuario_ativo'] = $usuario;
+    		header('Location:/ds/v2/poscadastro.php');
+    		exit;
     	}
     	else {
     		header('Location:/ds/v2/errobanco.html');

@@ -1,19 +1,12 @@
 <?php
 
 	abstract class VerificadorSessao {
-
-		private function session() {
-			return isset($_SESSION['user']);
-		}
-
-		public function verificarERedirecionar($rota) {
-			if ($this->session()) {
-				header('Location:'.$rota);
-			}
-			else {
+		public static function verificarSessao() {
+			if (!(isset($_SESSION['usuario_ativo']))) {
 				session_unset();
 				session_destroy();
 				header('Location:index.html');
+				exit();
 			}
 		}
 	}

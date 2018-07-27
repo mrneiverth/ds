@@ -1,6 +1,5 @@
 <?php
 
-	require_once 'UsuarioCadastrado.class.php';
 	require_once 'Album.class.php';
 	require_once 'Figurinha.class.php';
 
@@ -9,7 +8,8 @@
 		private $repetidas;
 
 		public function __constructor(){
-
+			$this->album = new Album();
+			$this->repetidas = NULL;
 		}
 
 		public function getAlbum() {
@@ -31,7 +31,7 @@
 		}
 
 		private function adicionarFigurinha($fig) {
-			if ($this->album.isRepetida($fig)) {
+			if ($this->album->isRepetida($fig)) {
 				$this->repetidas->append($fig);
 			}
 			else {

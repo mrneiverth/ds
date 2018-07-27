@@ -1,11 +1,11 @@
 <?php
 
-    require_once 'UsuarioNaoCadastrado.class.php';
+	ini_set('display_errors', 'On');
 
-	session_start();
-	$u = $_SESSION['user'];
-	echo $u->getCPF();
-	session_unset();
-	session_destroy();
+    require_once 'UsuarioCadastrado.class.php';
 
+    $user = new UsuarioCadastrado(1,1,1,1,1,1);
+    $user->initColecaoVazia();
+
+    echo "BEM";
 ?>

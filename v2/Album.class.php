@@ -1,6 +1,6 @@
 <?php
 
-	require_once 'Figurinha.class.db';
+	require_once 'Figurinha.class.php';
 
 	class Album {
 
@@ -14,9 +14,7 @@
 			$this->faltantes = 682;
 		}
 
-		public function carregar() {
-		
-		}
+		#public function carregar();
 
 		public function getFigurinhas() {
 			return $this->figurinhas;

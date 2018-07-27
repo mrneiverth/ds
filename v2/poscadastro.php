@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <title>Tinderinhas - Inicializar Coleção</title>
@@ -7,6 +6,15 @@
 		    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css"/> 
 		    <link rel="stylesheet" href="style.css">
 		    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+        <?php
+          require_once 'VerificadorSessao.class.php';
+          
+          session_start();
+          
+          VerificadorSessao::verificarSessao();
+        ?>
+
     </head>
     
     <body>

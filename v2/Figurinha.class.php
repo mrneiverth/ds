@@ -15,8 +15,7 @@
 			return $this->numero;
 		}
 
-		abstract public function getInfo() {
-		}
+		abstract public function getInfo();
 	}
 
 ?>
