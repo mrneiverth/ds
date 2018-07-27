@@ -4,6 +4,7 @@
     require_once 'Usuario.class.php';
     #require_once 'RegrasTroca.class.php';
     require_once 'Colecao.class.php';
+    require_once 'Album.class.php';
     #require_once 'Troca.class.php';
 
     class UsuarioCadastrado extends Usuario
@@ -12,10 +13,9 @@
         private $trocas;
         private $regras;
 
-        public function __constructor($cpf, $senha, $nome , $email, $cidade, $estado) {
-            parent::__constructor($cpf, $senha, $nome , $email, $cidade, $estado);
-            $this->colecao = new Colecao();
-            echo $this->colecao->getEstatisticas();
+        public function __construct($cpf, $senha, $nome , $email, $cidade, $estado) {
+            parent::__construct($cpf, $senha, $nome , $email, $cidade, $estado);
+            $this->colecao = new Colecao(new Album());
         }
 
         public function initColecaoVazia() {

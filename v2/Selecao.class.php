@@ -7,7 +7,7 @@
 
 		protected $pais;
 
-		public function __constructor($num, $nom, $p) {
+		public function __construct($num, $nom, $p) {
 			parent::__construct($num, $nom);
 			$this->pais = $p;
 		}

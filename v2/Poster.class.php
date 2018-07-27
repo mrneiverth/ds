@@ -7,7 +7,7 @@
 
 		protected $cidade;
 
-		public function __constructor($num, $nom, $cid) {
+		public function __construct($num, $nom, $cid) {
 			parent::__construct($num, $nom);
 			$this->cidade = $cid;
 		}

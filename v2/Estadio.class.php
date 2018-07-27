@@ -8,7 +8,7 @@
 		protected $capacidade;
 		protected $cidade;
 
-		public function __constructor($num, $nom, $cap, $cid) {
+		public function __construct($num, $nom, $cap, $cid) {
 			parent::__construct($num, $nom);
 			$this->capacidade = $cap;
 			$this->cidade = $cid;

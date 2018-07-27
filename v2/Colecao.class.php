@@ -4,10 +4,12 @@
 	require_once 'Figurinha.class.php';
 
 	class Colecao {
-		private $album = new Album;
+		protected $album;
 		private $repetidas = array();
 
-		public function __constructor() {}
+		public function __construct() {
+			$this->album = new Album();
+		}
 
 		public function getAlbum() {
 			return $this->album;
