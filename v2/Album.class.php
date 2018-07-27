@@ -4,15 +4,12 @@
 
 	class Album {
 
-		private $figurinhas;
-		private $coladas;
-		private $faltantes;
+		private $figurinhas = array();
+		private $coladas = 0;
+		private $faltantes = 682;
 
-		public function __constructor() {
-			$this->figurinhas = NULL;
-			$this->coladas = 0;
-			$this->faltantes = 682;
-		}
+		public function __constructor() {}
+
 
 		#public function carregar();
 
@@ -21,7 +18,7 @@
 		}
 
 		public function getEstatisticas() {
-			return "{$this->coladas}/682 Figurinhas Coladas\n{round($this->coladas/682}% do Album Completo\n";
+			return $this->coladas . "/682 Figurinhas Coladas<br>" . round(($this->coladas* 100)/682.0, 2) . "% do Album Completo<br>";
 		}
 
 		public function isRepetida($fig) {

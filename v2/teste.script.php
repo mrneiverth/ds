@@ -3,9 +3,12 @@
 	ini_set('display_errors', 'On');
 
     require_once 'UsuarioCadastrado.class.php';
-
+    
     $user = new UsuarioCadastrado(1,1,1,1,1,1);
-    $user->initColecaoVazia();
+    #echo $user->getColecao()->getAlbum()->getEstatisticas();
+
+    $a = new Album();
+    echo $a->getEstatisticas();
 
     echo "BEM";
 ?>

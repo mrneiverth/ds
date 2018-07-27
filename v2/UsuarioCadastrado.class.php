@@ -15,6 +15,7 @@
         public function __constructor($cpf, $senha, $nome , $email, $cidade, $estado) {
             parent::__constructor($cpf, $senha, $nome , $email, $cidade, $estado);
             $this->colecao = new Colecao();
+            echo $this->colecao->getEstatisticas();
         }
 
         public function initColecaoVazia() {

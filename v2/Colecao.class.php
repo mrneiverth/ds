@@ -4,13 +4,10 @@
 	require_once 'Figurinha.class.php';
 
 	class Colecao {
-		private $album;
-		private $repetidas;
+		private $album = new Album;
+		private $repetidas = array();
 
-		public function __constructor(){
-			$this->album = new Album();
-			$this->repetidas = NULL;
-		}
+		public function __constructor() {}
 
 		public function getAlbum() {
 			return $this->album;
@@ -27,7 +24,7 @@
 		}
 
 		public function getEstatisticas() {
-			return $this->album->getEstatisticas() . "{count($this->repetidas)} Repetidas\n";
+			return ($this->album->getEstatisticas() . count($this->repetidas) . " Repetidas<br>");
 		}
 
 		private function adicionarFigurinha($fig) {
