@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
+<style rel="stylesheet" type="text/css">
+#login {
+ margin-top: 16px;
+}
+
+#voltar {
+ margin-left: 4px;
+ margin-top: 4px;
+}
+
+
+
+</style>
+
+
     <head>
         <title>Tinderinhas - Cadastro</title>
         <meta charset="UTF-8">
@@ -9,7 +25,8 @@
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     </head>
-    
+
+
     <body>
       <div id="voltar">
         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" onclick="window.location='/ds/v2/index.html';">
@@ -17,73 +34,87 @@
         </button>
       </div>
 
-    	<div id="form">
+    	<div id="form" align="center">
       		<form method="POST" action="registra_usuario.script.php" id="form_cadastro">
-    				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      				<input id="cpf" name="cpf" maxlength="11" class="mdl-textfield__input" type="text" required>
-      				<label class="mdl-textfield__label" for="cpf">CPF</label>
-    				</div>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input id="email" name="email" class="mdl-textfield__input" type="text">
-              <label class="mdl-textfield__label" for="email">E-Mail</label>
+            <div>
+              <strong>
+                Criar uma nova conta
+              </strong>
+            </div>
+            <div id="fields1" align="center">
+      				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        				<input id="cpf" name="cpf" maxlength="11" class="mdl-textfield__input" type="text" required>
+        				<label class="mdl-textfield__label" for="cpf">CPF</label>
+      				</div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input id="email" name="email" class="mdl-textfield__input" type="text">
+                <label class="mdl-textfield__label" for="email">E-Mail</label>
+              </div>
             </div>
 
-    				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      				<input id="senha" name="senha" maxlength="8" class="mdl-textfield__input" type="password">
-      				<label class="mdl-textfield__label" for="senha">Senha</label>
-    				</div>
-
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input id="confirmarsenha" name="confirmarsenha" maxlength="8" class="mdl-textfield__input" type="password"">
-              <label class="mdl-textfield__label" for="confirmarsenha">Confirmar Senha</label>
+            <div id="fields2" align="center">
+      				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        				<input id="senha" name="senha" maxlength="8" class="mdl-textfield__input" type="password">
+        				<label class="mdl-textfield__label" for="senha">Senha</label>
+      				</div>
+          
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input id="confirmarsenha" name="confirmarsenha" maxlength="8" class="mdl-textfield__input" type="password">
+                <label class="mdl-textfield__label" for="confirmarsenha">Confirmar Senha</label>
+              </div>
             </div>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input id="nome" name="nome" class="mdl-textfield__input" type="text">
-              <label class="mdl-textfield__label" for="nome">Nome</label>
+            <div id="fields3" align="center">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input id="nome" name="nome" class="mdl-textfield__input" type="text">
+                <label class="mdl-textfield__label" for="nome">Nome</label>
+              </div>
+            
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input id="cidade" name="cidade" class="mdl-textfield__input" type="text">
+                <label class="mdl-textfield__label" for="cidade">Cidade</label>
+              </div>
             </div>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input id="cidade" name="cidade" class="mdl-textfield__input" type="text">
-              <label class="mdl-textfield__label" for="cidade">Cidade</label>
-            </div>
-
-            <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
-              <select id="estado" name="estado" class="mdl-selectfield__select">
-                <option class="mdl-menu__item" value="AC">Acre</option>
-                <option class="mdl-menu__item" value="AL">Alagoas</option>
-                <option class="mdl-menu__item" value="AP">Amapá</option>
-                <option class="mdl-menu__item" value="AM">Amazonas</option>
-                <option class="mdl-menu__item" value="BA">Bahia</option>
-                <option class="mdl-menu__item" value="CE">Ceará</option>
-                <option class="mdl-menu__item" value="DF">Distrito Federal</option>
-                <option class="mdl-menu__item" value="ES">Espírito Santo</option>
-                <option class="mdl-menu__item" value="GO">Goiás</option>
-                <option class="mdl-menu__item" value="MA">Maranhão</option>
-                <option class="mdl-menu__item" value="MT">Mato Grosso</option>
-                <option class="mdl-menu__item" value="MS">Mato Grosso do Sul</option>
-                <option class="mdl-menu__item" value="MG">Minas Gerais</option>
-                <option class="mdl-menu__item" value="PA">Pará</option>
-                <option class="mdl-menu__item" value="PB">Paraíba</option>
-                <option class="mdl-menu__item" value="PR">Paraná</option>
-                <option class="mdl-menu__item" value="PE">Pernambuco</option>
-                <option class="mdl-menu__item" value="PI">Piauí</option>
-                <option class="mdl-menu__item" value="RJ">Rio de Janeiro</option>
-                <option class="mdl-menu__item" value="RN">Rio Grande do Norte</option>
-                <option class="mdl-menu__item" value="RS">Rio Grande do Sul</option>
-                <option class="mdl-menu__item" value="RO">Rondônia</option>
-                <option class="mdl-menu__item" value="RR">Roraima</option>
-                <option class="mdl-menu__item" value="SC">Santa Catarina</option>
-                <option class="mdl-menu__item" value="SP">São Paulo</option>
-                <option class="mdl-menu__item" value="SE">Sergipe</option>
-                <option class="mdl-menu__item" value="TO">Tocantinhs</option>
-              </select>
-              <label class="mdl-selectfield__label" for="estado">Estado</label>
+            <div>
+              <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" padding-top= >
+                <select id="estado" name="estado" class="mdl-selectfield__select">
+                  <option class="mdl-menu__item" value="AC">Acre</option>
+                  <option class="mdl-menu__item" value="AL">Alagoas</option>
+                  <option class="mdl-menu__item" value="AP">Amapá</option>
+                  <option class="mdl-menu__item" value="AM">Amazonas</option>
+                  <option class="mdl-menu__item" value="BA">Bahia</option>
+                  <option class="mdl-menu__item" value="CE">Ceará</option>
+                  <option class="mdl-menu__item" value="DF">Distrito Federal</option>
+                  <option class="mdl-menu__item" value="ES">Espírito Santo</option>
+                  <option class="mdl-menu__item" value="GO">Goiás</option>
+                  <option class="mdl-menu__item" value="MA">Maranhão</option>
+                  <option class="mdl-menu__item" value="MT">Mato Grosso</option>
+                  <option class="mdl-menu__item" value="MS">Mato Grosso do Sul</option>
+                  <option class="mdl-menu__item" value="MG">Minas Gerais</option>
+                  <option class="mdl-menu__item" value="PA">Pará</option>
+                  <option class="mdl-menu__item" value="PB">Paraíba</option>
+                  <option class="mdl-menu__item" value="PR">Paraná</option>
+                  <option class="mdl-menu__item" value="PE">Pernambuco</option>
+                  <option class="mdl-menu__item" value="PI">Piauí</option>
+                  <option class="mdl-menu__item" value="RJ">Rio de Janeiro</option>
+                  <option class="mdl-menu__item" value="RN">Rio Grande do Norte</option>
+                  <option class="mdl-menu__item" value="RS">Rio Grande do Sul</option>
+                  <option class="mdl-menu__item" value="RO">Rondônia</option>
+                  <option class="mdl-menu__item" value="RR">Roraima</option>
+                  <option class="mdl-menu__item" value="SC">Santa Catarina</option>
+                  <option class="mdl-menu__item" value="SP">São Paulo</option>
+                  <option class="mdl-menu__item" value="SE">Sergipe</option>
+                  <option class="mdl-menu__item" value="TO">Tocantinhs</option>
+                </select>
+                <label class="mdl-selectfield__label" for="estado">Estado</label>
+              </div>
             </div>
 
     				<div id="login">
-    					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent form-control" type="submit">
+    					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent form-control" type="submit" id="finalizar">
     						Finalizar Cadastro
   					  </button>
   				  </div>

@@ -19,24 +19,37 @@
           .demo-card-wide > .mdl-card__menu {
             color: #fff;
           }
+
+          #masterdiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            margin-top: -88px;
+            
+          }
         </style>
 
     </head>
     
     <body>
-      
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text">Erro no Banco</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          Erro ao inserir os dados no Banco de Dados! Tente novamente.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <div id="voltar">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location='/ds/v2/cadastro.html';">
-              Voltar para Cadastro
-            </button>
+      <div id="masterdiv" >
+
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Erro no Banco</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Erro ao inserir os dados no Banco de Dados! Tente novamente.
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <div id="voltar">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location='/ds/v2/cadastro.html';">
+                Voltar para Cadastro
+              </button>
+            </div>
           </div>
         </div>
       </div> 	
