@@ -6,7 +6,7 @@
 		protected $numero;
 		protected $nome;
 
-		public function __constructor($num, $nom) {
+		public function __construct($num, $nom) {
 			$this->numero = $num;
 			$this->nome = $nom;
 		}

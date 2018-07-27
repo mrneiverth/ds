@@ -4,7 +4,7 @@
 		private $interClasse;
 		private $qttPedida;
 
-		public function __constructor($ic, $qtt) {
+		public function __construct($ic, $qtt) {
 			$this->interClasse = $ic;
 			$this->qttPedida = $qtt;
 		}
