@@ -8,6 +8,7 @@
     $senha = $_POST['senha'];
 
     $user = Login::ConfirmaLogin($cpf, $senha);
+    $user->carregar();
 
     if ($user != NULL) {
         $_SESSION['usuario_ativo'] = $user;
