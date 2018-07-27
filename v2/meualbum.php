@@ -10,10 +10,13 @@
         <?php 
             ini_set('display_errors', 'On');
 
+            require_once 'VerificadorSessao.class.php';
+            require_once 'UsuarioCadastrado.class.php';
+
             session_start();
             VerificadorSessao::verificarSessao();
 
-            $user = $_SESSION['ususario_ativo'];
+            $user = $_SESSION['usuario_ativo'];
         ?>
 
         <style>
@@ -103,9 +106,9 @@
                         <div class=\"mdl-grid\" id=\"section_".$section."\">";
                          
                 for ($i=0; $i < $quantity; $i++) {
-                    $path_to_image = $user->temFigurinha ? "firmino" : "canarinho";
+                    $path_to_image = $user->temFigurinha($j) ? "firmino" : "canarinho";
                     echo "<div class=\"mdl-cell mdl-cell--2-col\"> 
-                            <img src=\"http://54.94.241.129/".$path_to_image."/".$path_to_image.$j.".png\" href='figurinha.php?id=".$j."'> </div>"; 
+                    <a href='figurinha.php?id=".$j."'><img src=\"http://54.94.241.129/".$path_to_image."/".$path_to_image.$j.".png\"> </a> </div>"; 
                     $j = $j + 1;
                 }
                 

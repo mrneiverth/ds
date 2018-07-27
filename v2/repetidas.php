@@ -42,7 +42,8 @@
             <table class="mdl-data-table mdl-js-data-table">
                 <thead>
                     <tr>
-                    <th class="mdl-data-table__cell">Numero da Figurinha</th>
+                    <th class="mdl-data-table__cell">Nome da Figurinha</th>
+                    <th class="mdl-data-table__cell">Numero </th>
                     <th class="mdl-data-table__cell">Quantidade</th>
                     </tr>
                 </thead>
@@ -51,8 +52,9 @@
                     $repetidas = $user->getColecao()->getRepetidas();
                     for ($i = 0; $i < 682; $i++){
                         if($repetidas[$i] != 0){
-                            echo "<tr onclick='trclick();'>";
-                            echo "<td><a href='figurinha.php?id='$i'>$i</a></td>";
+                            echo "<tr>";
+                            echo "<td> <a href='figurinha.php?id=".$user->getColecao()->getAlbum()->getFigurinhas()[$i]."'> $i </a> </td>";
+                            echo "<td> $i</td>";
                             echo "<td> $repetidas[$i] </td>";
                             echo "</tr>";
                         }

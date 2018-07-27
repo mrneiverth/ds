@@ -15,6 +15,10 @@
 			return $this->numero;
 		}
 
+		public function getNome(){
+			return $this->nome;
+		}
+
 		abstract public function getInfo();
 	}
 
