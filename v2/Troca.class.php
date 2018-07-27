@@ -7,7 +7,7 @@
 		private $figurinhasContraparte;
 		private $status;
 
-		public function __constructor($user1, $user2, $figs1, $figs2) {
+		public function __construct($user1, $user2, $figs1, $figs2) {
 			$this->proponente = $user1;
 			$this->contraparte = $user2;
 			$this->figurinhasProponente = $figs1;

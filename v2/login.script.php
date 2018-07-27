@@ -10,11 +10,11 @@
     $user = Login::ConfirmaLogin($cpf, $senha);
 
     if ($user != NULL) {
-        $_SESSION['user'] = $cpf;
+        $_SESSION['usuario_ativo'] = $user;
         header('Location:/ds/v2/dashboard.php');
         exit;
     }else{
-        unset ($_SESSION['user']);
+        unset ($_SESSION['usuario_ativo']);
         header('Location:/ds/v2/dadosinvalidoslogin.html');
         exit;
     }

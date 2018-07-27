@@ -14,7 +14,7 @@
 		protected $clube;
 
 
-		public function __constructor($num, $nom, $p, $pos, $conv, $nasc, $alt, $pes, $clu) {
+		public function __construct($num, $nom, $p, $pos, $conv, $nasc, $alt, $pes, $clu) {
 			parent::__construct($num, $nom);
 			$this->pais = $p;
 			$this->posicao = $pos;

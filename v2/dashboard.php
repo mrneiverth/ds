@@ -21,20 +21,16 @@
         </style>
 
         <?php
+	        ini_set('display_errors', 'On');
+
             require_once 'VerificadorSessao.class.php';
+            require_once 'UsuarioCadastrado.class.php';
+            require_once 'Colecao.class.php';
             require_once 'db.class.php';
 
             session_start();
-            
-            $cpf = $_SESSION['cpf'];
-
-            $objDb = new db();
-            $link = $objDb->conecta_mysql();
-            $sql = "SELECT * FROM usuario WHERE cpf='$cpf'";
-
-            $result = mysqli_query($link, $sql) or die(mysqli_error());
-
-            $row = mysqli_fetch_row($result);
+            VerificadorSessao::verificarSessao();
+            $user = $_SESSION['usuario_ativo'];
 
         ?>
     </head>
@@ -45,13 +41,11 @@
         <div class="demo-card-square mdl-card mdl-shadow--4dp">
             <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    <?php echo $row[3] ?>
+                    <?php echo $user->getNome(); ?>
                 </a>
             </div>  
             <div class="mdl-card__supporting-text">
-                XXX/682 Figurinhas <br>
-                XX% do Album <br>
-                XXX Repetidas <br>
+                <?php echo $user->getColecao()->getEstatisticas(); ?><br>
                 
             </div>
             

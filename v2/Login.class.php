@@ -1,5 +1,5 @@
 <?php
-    require_once 'UsuarioNaoCadastrado.class.php';
+    require_once 'UsuarioCadastrado.class.php';
     require_once 'db.class.php';
 
     abstract class Login
@@ -24,7 +24,7 @@
         public static function EfetuaLogin($result){
             $aux = mysqli_fetch_row($result);
 
-            $user = new UsuarioNaoCadastrado($aux[0],$aux[1],$aux[2],$aux[3],$aux[4],$aux[5]);
+            $user = new UsuarioCadastrado($aux[0],$aux[1],$aux[2],$aux[3],$aux[4],$aux[5]);
 
             return $user;
         }

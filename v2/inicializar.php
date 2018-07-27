@@ -25,18 +25,31 @@
                 console.log(jsonArray);
 
                 $.ajax({
-                    type: "POST",
-                    url: 'ds/v2/updatecolecaonova',
-                    data: {data: jsonArray},
-                    datatype: 'json',
+                    method: "POST",
+                    url: 'ds/v2/updatecolecaonova.php',
+                    data: "batata",
+                    
                     sucess: function () {
                         alert("OK");
+                        window.location = "ds/v2/updatecolecaonova.php";
+                    },
+                    fail: function(XMLHttpRequest, textStatus, errorThrown) {
+                        alert("some error");
+                        window.location = ""
                     }
                 });
 
-                window.location.replace("updatecolecaonova.php");
             }
         </script>
+
+        <?php
+          require_once 'VerificadorSessao.class.php';
+          
+          session_start();
+          
+          VerificadorSessao::verificarSessao();
+        ?>
+
 
     </head>
     
