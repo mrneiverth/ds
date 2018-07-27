@@ -42,6 +42,15 @@
             }
         </script>
 
+        <?php
+          require_once 'VerificadorSessao.class.php';
+          
+          session_start();
+          
+          VerificadorSessao::verificarSessao();
+        ?>
+
+
     </head>
     
     <body>

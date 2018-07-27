@@ -11,6 +11,7 @@
 			$this->album = new Album();
 			for ($i = 0; $i < 682; $i++)
 				$this->repetidas[$i] = 0;
+		}
 
 		public function getAlbum() {
 			return $this->album;
