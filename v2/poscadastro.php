@@ -17,16 +17,32 @@
 
     </head>
     
+    <style rel="stylesheet" type="text/css">
+    
+    html, body{
+      height: 100%;
+    }
+    .mdl-button{
+      margin-top: 100px;
+      height: 150px;
+      width: 50%;
+    }
+    #empty{
+      margin-top: 50px;     
+    }
+    </style>
+
+
     <body>
-    	<div id="inicializar">
+    	<div id="inicializar" align="center">
     		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location='/ds/v2/inicializar.html';">
-  				Inicializar Coleção
+  				<h4>Inicializar Coleção</h4>
 			  </button>
     	</div>
 
-      <div id="vazia">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location='/ds/v2/index.html';">
-          Começar com Coleção Vazia
+      <div id="vazia" align = "center">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location='/ds/v2/index.html';" id="empty">
+          <h4>Começar com Coleção Vazia</h4>
         </button>
       </div>
     </body>
