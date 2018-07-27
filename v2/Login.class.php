@@ -11,7 +11,7 @@
             $objDb = new db();
             $link = $objDb->conecta_mysql();
             $sql = "SELECT * FROM usuario WHERE cpf='$cpf' and senha='$senha'";
-            $result = mysqli_query($link, $sql) or die(mysqli_error());       
+            $result = mysqli_query($link, $sql) or die(mysqli_error(link));       
             
             if (mysqli_num_rows ($result) > 0) {
                 $user = Login::EfetuaLogin($result);
