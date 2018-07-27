@@ -9,7 +9,7 @@
         private $usuario = 'root';
 
         //senha
-        private $senha = 'cadeira32';
+        private $senha = 'ds123';
 
         //banco de dados
         private $database = 'colecao_album_copa';
