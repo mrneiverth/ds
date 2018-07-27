@@ -8,10 +8,16 @@
 		private $coladas = 0;
 		private $faltantes = 682;
 
-		public function __constructor() {}
+		public function __construct() {}
 
 
-		#public function carregar();
+		public function carregar($dados) {
+			for ($i=0; $i < 682; $i++) { 
+			 	$fig = $dados[$i]['quantidade'];
+			 	if ($fig > 1) $fig = 1;
+			 	array_push($this->figurinhas, $fig);
+			 }
+		}
 
 		public function getFigurinhas() {
 			return $this->figurinhas;
@@ -22,11 +28,16 @@
 		}
 
 		public function isRepetida($fig) {
-			return (in_array($fig, $this->figurinhas));
+			return ($this->figurinhas[$fig] == 1);
+		}
+
+
+		public function temFigurinha($fig) {
+			return $this->figurinhas[$fig] > 0;
 		}
 
 		public function colarFigurinha($fig) {
-			array_push($this->figurinhas, $fig);
+			$this->figurinhas[$fig] = 1;
 			$this->coladas = $this->coladas + 1;
 			$this->faltantes = $this->faltantes - 1;
 		}
