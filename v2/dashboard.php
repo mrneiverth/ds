@@ -21,15 +21,11 @@
         </style>
 
         <?php
+            require_once 'VerificadorSessao.class.php';
             require_once 'db.class.php';
 
             session_start();
-            if ((!(isset($_SESSION['cpf'])) == true) and (!(isset($_SESSION['senha'])) == true)){
-                unset ($_SESSION['cpf']);
-                unset ($_SESSION['senha']);
-                header('Location:/ds/v2/index.html');
-                exit;
-            }
+            
             $cpf = $_SESSION['cpf'];
 
             $objDb = new db();
@@ -49,7 +45,7 @@
         <div class="demo-card-square mdl-card mdl-shadow--4dp">
             <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    <?php echo $row[2] ?>
+                    <?php echo $row[3] ?>
                 </a>
             </div>  
             <div class="mdl-card__supporting-text">

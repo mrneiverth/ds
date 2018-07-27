@@ -2,8 +2,6 @@
 
 	abstract class VerificadorSessao {
 
-		public function __constructor() {}
-
 		private function session() {
 			return isset($_SESSION['user']);
 		}

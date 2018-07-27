@@ -9,7 +9,7 @@
         protected $cidade;
         protected $estado;
 
-        public function __construct($cpf, $email, $senha, $nome, $cidade, $estado)
+        public function __construct($cpf, $senha, $nome , $email, $cidade, $estado)
         {
             $this->cpf = $cpf;
             $this->email = $email;
