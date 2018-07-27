@@ -5,17 +5,26 @@
 	class Album {
 
 		private $figurinhas = array();
-		private $coladas = 0;
-		private $faltantes = 682;
+		private $coladas;
+		private $faltantes;
 
-		public function __construct() {}
+		public function __construct() {
+			$this->coladas = 0;
+			$this->faltantes = 682;
+			for ($i = 0; $i < 682; $i++)
+				$this->figurinhas[$i] = 0;
+		}
 
 
 		public function carregar($dados) {
 			for ($i=0; $i < 682; $i++) { 
-			 	$fig = $dados[$i]['quantidade'];
-			 	if ($fig > 1) $fig = 1;
-			 	array_push($this->figurinhas, $fig);
+				$fig = $dados[$i]['quantidade'];
+			 	if ($fig > 1){
+					$fig = 1;
+					$this->coladas = $this->coladas + 1;
+				 }
+				$this->figurinhas[$i] = $fig;
+				 
 			 }
 		}
 
@@ -33,7 +42,7 @@
 
 
 		public function temFigurinha($fig) {
-			return $this->figurinhas[$fig] > 0;
+			return ($this->figurinhas[$fig] > 0);
 		}
 
 		public function colarFigurinha($fig) {

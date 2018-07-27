@@ -12,7 +12,7 @@
             $usuario->initColecaoVazia();
             session_start();
             $_SESSION['usuario_ativo'] = $usuario;
-    		header('Location:/ds/v2/poscadastro.php');
+    		header('Location:/ds/v2/dashboard.php');
     		exit;
     	}
     	else {

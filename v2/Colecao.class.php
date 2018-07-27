@@ -23,7 +23,7 @@
 
 
 		public function getEstatisticas() {
-			return ($this->album->getEstatisticas() . count($this->repetidas) . " Repetidas<br>");
+			return ($this->album->getEstatisticas() . array_sum($this->repetidas) . " Repetidas<br>");
 		}
 
 		public function adicionarFigurinha($fig) {
