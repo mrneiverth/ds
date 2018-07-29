@@ -59,9 +59,10 @@
 
                       for ($i = 0; $i < 682; $i++){
                         if($repetidas[$i] != 0){
+                          #echo "<h4> $i " . "Redirect: " . $user->getColecao()->getAlbum()->getFigurinhas()[$i] . "</h4>";
                           echo "<tr>";
-                          echo "<td> <a href='figurinha.php?id=".$user->getColecao()->getAlbum()->getFigurinhas()[$i]."'>" .$i. "</a></td>";
-                          echo "<td> <a href='figurinha.php?id=".$user->getColecao()->getAlbum()->getFigurinhas()[$i]."'>" . $result[$i]['Nome']. "</a></td>";
+                          echo "<td> <a href='figurinha.php?id=$i".$user->getColecao()->getAlbum()->getFigurinhas()[$i]."'>" .$i. "</a></td>";
+                          echo "<td> <a href='figurinha.php?id=$i".$user->getColecao()->getAlbum()->getFigurinhas()[$i]."'>" . $result[$i]['Nome']. "</a></td>";
                           echo "</a>";
                           echo "<td> $repetidas[$i] </td>";
                           echo "</tr>";
