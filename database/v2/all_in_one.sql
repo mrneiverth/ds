@@ -22,12 +22,12 @@ CREATE TABLE IF NOT EXISTS figurinha(
 
 CREATE TABLE IF NOT EXISTS jogador(
   ID SMALLINT(3) UNSIGNED NOT NULL,
-  Clube VARCHAR(30) NOT NULL,
+  Clube VARCHAR(70) NOT NULL,
   Peso FLOAT(3,1) NOT NULL,
   Altura FLOAT(3,2) NOT NULL,
   Nascimento DATE NOT NULL,
   Convocacao YEAR NOT NULL,
-  Posicao CHAR(3) NOT NULL,
+  Posicao VARCHAR(30) NOT NULL,
   Pais VARCHAR(20) NOT NULL,
   PRIMARY KEY (ID),
   FOREIGN KEY (ID) REFERENCES figurinha (ID)
@@ -916,3 +916,4 @@ INSERT INTO poster VALUES
 	(29, "Samara"),
 	(30, "Yekaterinburg"),
 	(31, "Saransk");
+
